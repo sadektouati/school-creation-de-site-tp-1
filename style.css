@@ -1,0 +1,483 @@
+:root{
+    /* font-size et gutter, source type-scale.com #####################################################################*/
+    /* font size scale, 1.250 – Major Third ###########################################################################*/
+    --text-900: 3.052rem;
+    --text-800: 2.441rem;
+    --text-700: 1.953rem;
+    --text-600: 1.563rem;
+    --text-500: 1.25rem;
+    --text-400: 1rem;
+    --text-300: 0.8rem;
+    --text-200: 0.64rem;
+    --text-100: 0.512rem;
+
+    /* gutter 1.414 – Augmented Fourth ##################################################################################*/
+    --gap-1000: 5.653rem;
+    --gap-800: 3.998rem;
+    --gap-600: 2.827rem;
+    --gap-400: 1.999rem;
+    --gap-300: 1.414rem;
+    --gap-200: 1rem;
+    --gap-100: 0.707rem;
+    
+
+    /* colors */
+    --color-light-gray: lightgray;
+    --color-middle-gray: #ababab;
+    --color-gray: gray;
+
+    --site-aside-width: 15rem;
+    /* line-height, source le cours ##################################################################################################### */
+    line-height: 1.5625;
+}
+  
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+      margin-top: auto;
+      margin-right: auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      width: min(80rem, 90%);
+
+    font-size: 0;
+}
+
+    /* 
+        je comprend que vous aimez un css qui est "terse", c'est pour ça que j'ai pas utilisé le grid display ici.
+        toutefois j'ai pret la liberté d'utiliser grid dans la .grille-4 en bas.
+
+        je comprends votre point de vue, mais si on parle web performance, le grid et le flexbox sont preferrables (plus rapide a afficher), et je pense que c'est le cas pour toute les fonctionalités CSS nouvelles parce que elles sont implementé avec performance et securité dans la tête.
+     */
+    /* display: grid; */
+    /* gap: var(--gap-800) var(--gap-200); */
+    /* j'ai pas besoin de plus de colonne pour le moment... */
+    /* grid-template-columns: 15rem auto; */
+    /* justify-content: center; */
+
+body * {
+    font-size: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+/* regles generiques ################################################################################################### */
+time{
+    font-size: var(--text-300);
+}
+
+
+/* Background de l'image, source: l'exercice vu en classe ########################################################################*/
+img {
+    min-width: 5rem;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) calc(50% - 1px),
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0) calc(50% + 1px),
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        to top right,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) calc(50% - 1px),
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0) calc(50% + 1px),
+        rgba(0, 0, 0, 0) 100%
+      );
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   line-height: 1.25;
+   max-width: 40ch;
+}
+  
+h1 {
+    font-size: var(--text-900);
+}
+  
+h2 {
+    font-size: var(--text-800);
+    border-bottom: 1px solid var(--color-gray);
+    padding-bottom: var(--gap-100);
+}
+  
+h3 {
+    font-size: var(--text-600);
+ }
+
+ h4 {
+    font-size: var(--text-500);
+ }
+   
+a, button{
+    line-height: 1.6;
+    font-size: var(--text-400);
+    color: initial;
+    text-decoration: none;
+
+    background-color: var(--color-light-gray);
+    border: none;
+
+    display: inline-block;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    cursor: pointer;
+}
+
+a:hover, button:hover,a:focus,  button:focus{
+    background-color: var(--color-middle-gray);
+}
+
+
+/* Composants et utility classes ########################################################################################################## */
+.cards-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards-container > section{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 30%;
+
+    padding-top: var(--gap-100);
+    padding-right: var(--gap-100);
+    padding-bottom: var(--gap-100);
+    padding-left: var(--gap-100);
+
+    /* pour preserver une coherence entre les cartes */
+    border-width: 1px;
+    border-style: solid ;
+    border-color: var(--color-light-gray);
+    border-radius: 5px;
+}
+
+.cards-container section > * + *{
+    margin-top: var(--gap-200);
+}
+
+.cards-container section img{
+    height: 7rem;
+  }
+
+.cards-container section h3{
+    text-align: center;
+}
+
+.cards-container section footer{
+    margin-top: auto;
+    padding-top: var(--gap-100);
+    min-height: 5rem;
+}
+
+
+
+.grille-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: var(--gap-400);
+    column-gap: var(--gap-400);
+}
+
+.grille-4 > *{
+     margin-top: 0;
+}
+
+.grille-4 > :is(h2, a){
+     grid-column: 1 / -1;
+}
+
+.grille-4 a {
+    place-self: self-start;
+}
+
+.grille-4 img{
+  width: 100%;
+  height: 10rem;
+}
+
+/* regles globales ########################################################################################################## */
+
+body > * + * {
+    margin-top: var(--gap-1000);
+}
+
+body > header + header{
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+/* aside globale du site ########################################################################################### */
+.site-aside {
+    width:  var(--site-aside-width);
+    display: inline-block;
+}
+
+.site-aside > * + *{
+    margin-top: var(--gap-200);
+    display: block;
+}
+
+.site-aside :is(a, img){
+    width: 12rem;
+}
+.site-aside a{
+    text-align: center;
+}
+
+.site-aside + main{
+    display: inline-block;
+    width: calc(100% - var(--site-aside-width));
+}
+
+/* navigation principale ############################################################################################# */
+nav {
+    font-size: 0;
+    margin-top: var(--gap-400);
+}
+
+nav > * + *{
+    margin-left: var(--gap-100);
+}
+nav img{
+  height: 1.6rem;
+}
+
+nav div {
+    position: relative;
+    display: inline-block;
+}
+
+nav span {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* z-index: 1; */
+
+    display: block;
+    min-width: 100%;
+
+    padding-top: var(--gap-100);
+    padding-right: var(--gap-100);
+    padding-bottom: var(--gap-100);
+    padding-left: var(--gap-200);
+
+    background-color: var(--color-light-gray);
+    opacity: 0;
+    pointer-events: none;
+}
+
+div:focus-within span {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+nav span > * {
+    display: block;
+}
+
+/* Hero image du site #################################################################################################### */
+.banner{
+    display: grid;
+    row-gap: var(--gap-100);
+    column-gap: var(--gap-100);
+    place-items: center;
+}
+
+.banner +.banner{
+    margin-top: var(--gap-100);
+}
+
+.banner > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.banner img{
+  height: 15rem;
+    width: 100%;
+}
+
+.banner > *:not(img) {
+    font-weight: 300;
+    max-width: min(40ch, 90%);
+}
+
+/* regles generale des enfants de la section main ####################################################################################*/
+main > * + * {
+    margin-top: var(--gap-800);
+}
+
+main article p{
+    max-width: 65ch;
+    font-size: var(--text-500);
+}
+
+main article > * + *{
+    margin-top: var(--gap-400);
+
+}
+
+/* classe de block ################################################################################################### */
+
+.aider-nous{
+    font-size: 0;
+    --aider-image-size: 35rem;
+}
+
+.aider-nous img{
+    width: var(--aider-image-size);
+   height: 20rem;
+}
+
+.aider-nous div{
+    display: inline-block;
+    max-width: calc(100% - var(--aider-image-size) - var(--gap-300)); 
+
+    margin-top: 0;
+    margin-left: var(--gap-300);
+ }
+
+ .aider-nous div a{
+     display: block;
+ }
+    .aider-nous div * + *{
+    margin-top: var(--gap-200);
+ }
+
+
+.call-up h4{
+    font-size: var(--text-700);
+    font-weight: 400;
+}
+
+.animals{
+    display: flex;
+    justify-content: space-between;    
+}
+
+.animals > * > * +*{
+    margin-top: var(--gap-100);
+}
+
+.animals > *{
+    display: inline-block;
+}
+
+.animals > div > * {
+    width: 30rem;
+}
+
+.animals > div img{
+  height: 15rem;
+}
+
+.animals > aside{
+    flex-shrink: 0;    
+    flex-grow: 0;    
+    flex-basis: 22rem;    
+}
+.animals aside p {
+    font-size: var(--text-400);
+}
+
+
+
+.caracteristiques > section > * + *{
+    margin-top: var(--gap-200);
+}
+
+
+
+.animals-container > section{
+    border-width: 1px;
+    border-style: solid ;
+    border-color: var(--color-light-gray);
+    margin-top: var(--gap-300);
+    padding-top: var(--gap-100);
+    padding-right: var(--gap-100);
+    padding-bottom: var(--gap-100);
+    padding-left: var(--gap-100);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.animals-container > section > p{
+    margin-top: var(--gap-200);
+    margin-bottom: var(--gap-200);
+    font-size: var(--text-400);
+}
+
+.animals-container > section > a{
+    margin-top: auto;
+}
+
+/* footer du site ############################################################################################################ */
+
+.site-footer{
+    border-top: 1px solid var(--color-gray);
+    padding-top: var(--gap-400);
+    padding-bottom: var(--gap-400);
+    width: 100%;
+}
+
+.site-footer > *{
+    display: flex;
+    align-items: center;
+}
+
+.site-footer > * + *{
+    margin-top: var(--gap-200);
+    padding-top: var(--gap-200);
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.site-footer h4{
+    min-width: 11ch;
+}
+
+.site-footer h4 ~ *{
+    margin-left: var(--gap-200);
+}
+
+.site-footer address{
+    font-size: 1.2rem;
+}
+
+.site-footer nav{
+    justify-content: center;
+    padding-top: var(--gap-600);
+}
+
+.site-footer > img {
+    width: 20rem;
+    height: 5rem;
+    display: block;
+    margin: 3rem auto;
+}

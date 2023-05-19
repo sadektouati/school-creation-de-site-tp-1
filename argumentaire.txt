@@ -1,0 +1,58 @@
+
+
+Note : J'ai prêt la liberté de m'inspirer de votre exemple vu en classe.
+Pour le CSS, j'ai prêt la liberté d'utiliser des fonctions et propriété qu'on a pas vu en classe. Vous trouvez des commentaires sur quelques points. 
+
+
+Pour l'arborescence j'ai choisi de séparer les deux parties, une sur le menu principal dans l'entête de page et la deuxième qui est secondaire sur le pied de page parce qu’elle contient des liens qui sont peu recherchés par un usager typique. J'ai aussi fait une image(logo) dans le lien de l'accueil.
+
+
+I - La page Accueil (une page vitrine):
+
+1 - C'est la page d'accueil, et c'est très important de faire des décisions correctes pour la hiérarchisation. Moi j'ai choisi l'élément avec grande image (je l’ai mis comme HERO IMAGE) et le texte qui définit ce que démarque et l'avantage du zoo par rapport aux compétiteurs, et ce que le mis à part des autres zoos, en premier lieu (above the fold). À mon sens, le visiteur aussi a besoin de cette information surtout que, je pense, les visiteurs ne sont pas réguliers dans la plupart des cas.
+
+2 - J'ai choisi de mettre l'élément avec texte explicatif de rôle et de mission du zoo puisque ça donne plus d'information sur le zoo et invite l'utilisateurs à explorer voir participer dans les activités organisé par le zoo.
+
+3 - J'ai décidé de mettre l'élément qui comporte une image de grande taille et l'information sur sa position géographique en troisième lieu dans la page étant donné que c'est un zoo en forêt.
+
+4 - Pour un utilisateur qui veut savoir plus sur le zoo, j'ai mis l'élément qui propose des article à lire pour savoir plus sur le zoo juste après qu'il a vu ce que démarque le zoo des autres.
+
+5 - Après avoir laisser l'utilisateur fait ça découverte du zoo, je lui propose de devenir membre. Je pourrai le proposer en haut mais à mon sens ça pourrai lui distraire de son but (connaitre le zoo) et fort possible il ne va cliquer sur le CTA puisqu’il n'a pas toute l'information pour être convaincu.
+
+6 - En dernier (avant pied de page), j'ai mis l'élément qui invite l'utilisateur à supporter financièrement la mission du zoo, maintenant qu’il esperament comprend ce qu'on fait. Et parce que ce n’est pas ce que la majorité des visiteurs cherche sur une page d'accueil. 
+
+
+
+
+
+II La page Portail des animaux (une page portail):
+
+1 - Pour le premier élément de la page, je vois que l'élément qui comporte une grande image, et le texte invitant qui suscite l'intérêt dans l'utilisateur a visiteur, est l'élément idéal pour bien accueillir les visiteurs de la page.
+
+2 - Dans l'espoir de continue à susciter l'intérêt de visite chez l'usager, j'ai décidé de mettre en deuxième position un élément qui contient les animaux les plus populaire dans le zoo, et ceux 1) pour lui aider à comprendre ce que le zoo offre comme animal, et 2) ces animaux sont populaires et il est fort probable que l'utilisateur va les aimer aussi.
+
+J'ai aussi met en droite un petit carré qui comporte des liens vers des pages selon le type d'animal, pour faciliter la recherche à l'utilisateur, et parce que c'est un filtre qui est comme même familier sur des page portail.
+
+3 - J'ai fait le choix de mettre l'élément qui contient tous les animaux en troisième lieu pour offrir à l'utilisateur le choix d'aller chercher plus d'information sur des animaux qui sont dans le zoo sont qu’il fait une recherche lui-même.
+
+4 - J'ai décidé de crée un élément pour inviter l'utilisateur à faire une visite en personne sur zoo après avoir lui donné un idée sur le zoo, le foret, les animaux etc.. Et je le mets en bas de page pour ne pas interrompre le flow de l'utilisateur.
+
+5 - Parrainez un cougar, c'est demander de l'argent a l'utilisateur, chose qui n'est pas probablement là pour faire. Donc ce n’est pas une priorité, et il faut pas le demander au même point que l'utilisateur est entrain de consommer un contenu qui est venu pour le chercher.
+
+
+III La page de Fiche de détail d’un animal (une page fiche):
+
+
+1 - Étant donné que c'est une page de fiche, il est naturel que je suppose que l'utilisateur est ici pour lire davantage sur un animal. Donc je mets en premier lieu l'élément qui comporte un texte qui décret les caractéristiques de l'animal: trait physique, habitat...
+
+J'ai met aussi un carré pour essayer d'inviter l'utilisateur à aller voir l'animal dans le zoo. (L’image doit montrer l'animal dans le zoo et le foret... etc.).
+
+2 - J'ai décidé de mettre l'élément avec l'information supplémentaire sur l'animal juste après le texte informatif sur ce que démarque cet animal des autres.
+
+3 - En troisième position verticale, j'ai choisi l'élément qui décret un animal bien précis (Anneta). Je pense que c'est naturel de vouloir lire sur un animal spécifique après avoir eu l'information sur son type. C'est une introduction à cet animal précis.
+
+J'ai aussi met l'élément qui comporte un sommaire d'un article sur cet animal (Anneta) et donne le lien a l'utilisateur pour lire l'article dans son intégralité sur une autre page.
+
+4 - La décision de mettre l'élément avec galerie d'image en bas était un peu difficile, mais nécessaire pour ne pas interrompre le flow de l'utilisateur avec des images. Le but c'est de le faire venir visiter le zoo et donc l'article sur Anneta a plus de chance pour convaincre l'utilisateur que la galerie d'images. (Étant donné que c'est une fiche et généralement c'est des gens qui préfère lire qui arrive sur cette page, "mon opinion ici").
+
+5 - Évènement vedette est un peu "Off" donc j'ai décidé de la mettre en dernier.
